@@ -1,0 +1,94 @@
+company: Rosberry
+
+project_template: objc
+deployment_target: 9.0
+configure_git: true
+dependency_managers: cocoapods
+test_target_name: UnitTests
+
+run_script_phases:
+  - file: todo.sh
+    name: Warnings for TODO and FIXME comments
+
+warnings:
+  - GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED
+  - GCC_WARN_MISSING_PARENTHESES
+  - GCC_WARN_ABOUT_RETURN_TYPE
+  - GCC_WARN_SIGN_COMPARE
+  - GCC_WARN_CHECK_SWITCH_STATEMENTS
+  - GCC_WARN_UNUSED_FUNCTION
+  - GCC_WARN_UNUSED_LABEL
+  - GCC_WARN_UNUSED_VALUE
+  - GCC_WARN_UNUSED_VARIABLE
+  - GCC_WARN_SHADOW
+  - GCC_WARN_64_TO_32_BIT_CONVERSION
+  - GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS
+  - GCC_WARN_ABOUT_MISSING_NEWLINE
+  - GCC_WARN_UNDECLARED_SELECTOR
+  - GCC_WARN_TYPECHECK_CALLS_TO_PRINTF
+  - GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS
+  - CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS
+  - CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF
+  - CLANG_WARN_IMPLICIT_SIGN_CONVERSION
+  - CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION
+  - CLANG_WARN_EMPTY_BODY
+  - CLANG_WARN_ENUM_CONVERSION
+  - CLANG_WARN_INT_CONVERSION
+  - CLANG_WARN_CONSTANT_CONVERSION
+
+app_target_templates:
+  objc:
+    - <%= project_name %>:
+      - Default/Info.plist
+      - Default/main.m
+    - Classes:
+      - AppDelegate:
+        - Default/<%= prefix %>AppDelegate.h
+        - Default/<%= prefix %>AppDelegate.m
+      - BusinessLogic:
+        - Services:
+      - Core:
+      - Presentation:
+        - Categories:
+            - Extensions/UIColor+ApplicationColors.h
+            - Extensions/UIColor+ApplicationColors.m
+            - Extensions/UIFont+ApplicationFonts.h
+            - Extensions/UIFont+ApplicationFonts.m
+    - Resources:
+      - Default/Images.xcassets
+    - Storyboards:
+      - Default/Main.storyboard
+      - Default/LaunchScreen.storyboard
+  swift:
+    - <%= project_name %>:
+      - Default/Info.plist
+    - Classes:
+      - AppDelegate:
+        - Default/AppDelegate.swift
+      - BusinessLogic:
+        - Services:
+      - Core:
+      - Presentation:
+        - Extensions:
+            - Extensions/UIColor+ApplicationColors.swift
+            - Extensions/UIFont+ApplicationFonts.swift
+    - Resources:
+      - Default/Images.xcassets
+    - Storyboards:
+      - Default/Main.storyboard
+      - Default/LaunchScreen.storyboard
+
+test_target_templates:
+  objc:
+    - <%= test_target_name %>:
+      - BusinessLogic:
+        - Services:
+      - Presentation:
+      - Default/<%= test_target_name %>-Info.plist
+  swift:
+    - <%= test_target_name %>:
+      - BusinessLogic:
+        - Services:
+      - Presentation:
+      - Default/<%= test_target_name %>-Info.plist
+
