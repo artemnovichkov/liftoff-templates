@@ -39,44 +39,44 @@ warnings:
 app_target_templates:
   objc:
     - <%= project_name %>:
-      - Default/Info.plist
-      - Default/main.m
+      - Info.plist
+      - main.m
     - Classes:
       - AppDelegate:
-        - Default/<%= prefix %>AppDelegate.h
-        - Default/<%= prefix %>AppDelegate.m
+        - <%= prefix %>AppDelegate.h
+        - <%= prefix %>AppDelegate.m
       - BusinessLogic:
         - Services:
       - Core:
       - Presentation:
         - Categories:
-            - Extensions/UIColor+ApplicationColors.h
-            - Extensions/UIColor+ApplicationColors.m
-            - Extensions/UIFont+ApplicationFonts.h
-            - Extensions/UIFont+ApplicationFonts.m
+            - UIColor+ApplicationColors.h
+            - UIColor+ApplicationColors.m
+            - UIFont+ApplicationFonts.h
+            - UIFont+ApplicationFonts.m
     - Resources:
-      - Default/Images.xcassets
+      - Images.xcassets
     - Storyboards:
-      - Default/Main.storyboard
-      - Default/LaunchScreen.storyboard
+      - Main.storyboard
+      - LaunchScreen.storyboard
   swift:
     - <%= project_name %>:
-      - Default/Info.plist
+      - Info.plist
     - Classes:
       - AppDelegate:
-        - Default/AppDelegate.swift
+        - AppDelegate.swift
       - BusinessLogic:
         - Services:
       - Core:
       - Presentation:
         - Extensions:
-            - Extensions/UIColor+ApplicationColors.swift
-            - Extensions/UIFont+ApplicationFonts.swift
+            - UIColor+ApplicationColors.swift
+            - UIFont+ApplicationFonts.swift
     - Resources:
-      - Default/Images.xcassets
+      - Images.xcassets
     - Storyboards:
-      - Default/Main.storyboard
-      - Default/LaunchScreen.storyboard
+      - Main.storyboard
+      - LaunchScreen.storyboard
 
 test_target_templates:
   objc:
@@ -84,11 +84,11 @@ test_target_templates:
       - BusinessLogic:
         - Services:
       - Presentation:
-      - Default/<%= test_target_name %>-Info.plist
+      - <%= test_target_name %>-Info.plist
   swift:
     - <%= test_target_name %>:
       - BusinessLogic:
         - Services:
       - Presentation:
-      - Default/<%= test_target_name %>-Info.plist
+      - <%= test_target_name %>-Info.plist
 
