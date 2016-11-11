@@ -54,6 +54,7 @@ app_target_templates:
             - UIColor+ApplicationColors.m
             - UIFont+ApplicationFonts.h
             - UIFont+ApplicationFonts.m
+        - Modules:
     - Resources:
       - Images.xcassets
     - Storyboards:
@@ -72,6 +73,7 @@ app_target_templates:
         - Extensions:
             - UIColor+ApplicationColors.swift
             - UIFont+ApplicationFonts.swift
+        - Modules:
     - Resources:
       - Images.xcassets
     - Storyboards:
