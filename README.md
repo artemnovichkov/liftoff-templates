@@ -1,19 +1,23 @@
 # Liftoff Templates
 
-Шаблоны для [liftoff](https://github.com/thoughtbot/liftoff), утилиты для создания и конфигурирования iOS Xcode проектов.
+Templates for [liftoff](https://github.com/thoughtbot/liftoff), CLI for creating and configuring new Xcode projects.
 
-## Как использовать?
+## Usage
 
-Скопируйте папку templates и файл конфигурации liftoffrc в папку с утилитой (директорию установки можно узнать с помощью команды `brew info liftoff`).
+Copy `templates` folder and `liftoffrc` configuration file into tool directory (check information about installed tool by `brew info liftoff` command).
 
-## Плюсы
+## Features
 
-- Шаблоны для objc и swift проектов
-- Кастомная структура проекта
-- Автоматическая установка Cocoapods/Carthage библиотек (по умолчанию инициализирует cocoapods)
-- Установка префикса при создании проекта
-- Скрипт для создания warnings к TODO и FIXME комментариям
+- Templates for Objective-C and Swift projects
+- Custom project structure
+- Automatic installation of Cocoapods/Carthage dependencies (Cocoapods by default)
+- Prefixes for all classes (without boring renaming of `AppDelegate` classes)
+- Script for showing TODO's and FIXME's as warnings
 
-## Контакты
+## Author
 
-Артем Новичков, novichkoff93@gmail.com
+Artem Novichkov, novichkoff93@gmail.com
+
+## License
+
+Liftoff Templates is available under the MIT license. See the LICENSE file for more info.
