@@ -1,9 +1,9 @@
 company: Rosberry
 
-project_template: objc
+project_template: swift
 deployment_target: 9.0
 configure_git: true
-dependency_managers: cocoapods
+dependency_managers: carthage
 test_target_name: UnitTests
 
 run_script_phases:
@@ -35,6 +35,8 @@ warnings:
   - CLANG_WARN_ENUM_CONVERSION
   - CLANG_WARN_INT_CONVERSION
   - CLANG_WARN_CONSTANT_CONVERSION
+
+xcode_command: open -a 'Xcode' .
 
 app_target_templates:
   objc:
