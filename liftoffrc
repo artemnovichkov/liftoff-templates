@@ -7,8 +7,8 @@ dependency_managers: carthage
 test_target_name: UnitTests
 
 run_script_phases:
-  - file: todo.sh
-    name: Warnings for TODO and FIXME comments
+  - file: swiftlint.sh
+    name: SwiftLint
 
 warnings:
   - GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED
