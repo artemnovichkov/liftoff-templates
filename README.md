@@ -4,18 +4,22 @@ Templates for [liftoff](https://github.com/thoughtbot/liftoff), CLI for creating
 
 ## Usage
 
-Copy `templates` folder and `liftoffrc` configuration file into tool directory (check information about installed tool by `brew info liftoff` command). Configuration file contains two templates - for Objective-C and Swift projects. Run `liftoff` command in needed directory. It will make project with default Objective-C template. To generate Swift project use `template` option, for example:
+Copy `templates` folder and `liftoffrc` configuration file into tool directory (check information about installed tool by `brew info liftoff` command). Configuration file contains two templates - for Swift and Objective-C projects. Run `liftoff` command in needed directory. It will make a project with default Swift template. To generate Objective-C project use `template` option, for example:
 ```bash
-$ liftoff --template swift`
+$ liftoff --template objc
 ```
 
 ## Features
 
-- Templates for Objective-C and Swift projects
+- Templates for Swift and Objective-C projects
 - Custom project structure
-- Automatic installation of Cocoapods/Carthage dependencies (Cocoapods by default)
+- Automatic installation of Cocoapods/Carthage dependencies (Carthage by default)
 - Prefixes for all classes (without boring renaming of `AppDelegate` classes)
-- Script for showing TODO's and FIXME's as warnings
+- [SwiftLint](https://github.com/realm/SwiftLint) Build Phases script
+
+## Knowing Issues
+- "Convert to Current Swift Syntax" warning. Just update project. It's liftoff issue.
+- [Update to recommended settings](https://github.com/thoughtbot/liftoff/issues/266) warning
 
 ## Author
 
