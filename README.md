@@ -4,7 +4,9 @@ Templates for [liftoff](https://github.com/thoughtbot/liftoff), CLI for creating
 
 ## Usage
 
-Copy `templates` folder and `liftoffrc` configuration file into tool directory (check information about installed tool by `brew info liftoff` command). Configuration file contains two templates - for Swift and Objective-C projects. Run `liftoff` command in needed directory. It will make a project with default Swift template. To generate Objective-C project use `template` option, for example:
+1. [Install](https://github.com/thoughtbot/liftoff#installation) liftoff
+2. Copy `templates` folder and `liftoffrc` configuration file into tool directory (check information about installed tool by `brew info liftoff` command). Configuration file contains two templates - for Swift and Objective-C projects. 
+3. Run `liftoff` command in needed directory. It will make a project with default Swift template. To generate Objective-C project use `template` option, for example:
 ```bash
 $ liftoff --template objc
 ```
